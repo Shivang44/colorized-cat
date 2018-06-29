@@ -9,4 +9,4 @@ You can clone and install it locally, but to make it easy, this utility is publi
 # Usage
 `ccat YOUR_FILE`
 
-Easy as that. ccat supports over 150 languages due to the fact that it uses prism.js to tokenize and calculate the syntax highlighting for each token!
+Easy as that. ccat supports over 150 languages due to the fact that it uses [PrismJS](https://github.com/PrismJS/prism) to tokenize and calculate the syntax highlighting for each token!
