@@ -1,0 +1,19 @@
+{
+  "name": "ccat",
+  "version": "0.0.1",
+  "description": "Colorized cat output for many different languages and configuration files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shivang Saxena",
+  "license": "MIT",
+  "bin": {
+    "ccat": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.16.0",
+    "highlight.js": "^9.12.0",
+    "prismjs": "^1.15.0"
+  }
+}
