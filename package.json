@@ -1,5 +1,5 @@
 {
-  "name": "ccat",
+  "name": "colorized-cat",
   "version": "0.0.1",
   "description": "Colorized cat output for many different languages and configuration files.",
   "main": "index.js",
