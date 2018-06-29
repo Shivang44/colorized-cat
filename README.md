@@ -1,3 +1,5 @@
+# This is a work in progress, and is not fully functional yet. 
+
 # ccat
 Turn those boring cat outputs into colorized (syntax-highlighted) outputs!
 
