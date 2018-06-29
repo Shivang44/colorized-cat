@@ -31,7 +31,9 @@ const tokenize = function (code) {
 const colorizeCode = function (code, tokens) {
 	const colorMap = {
 		'string': Chalk.magenta,
-		'keyword': Chalk.blue
+		'keyword': Chalk.blue,
+		'operator': Chalk.yellow,
+		'comment': Chalk.italic.yellowBright
 	};
 
 	let colorizedCode = '';
