@@ -2,7 +2,7 @@
 Turn those boring cat outputs into colorized (syntax-highlighted) outputs!
 
 # Installation (Doesn't work yet, need to publish to npm)
-npm intall -g ccat
+npm install -g ccat
 
 # Usage
 ccat YOUR_FILE
