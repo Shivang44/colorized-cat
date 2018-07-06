@@ -20,6 +20,20 @@ You can clone and install it locally, but to make it easy, this utility is publi
 
 Note: At this time, file extensions (like file.py or file.js) are required to detect the language. In the future, hopefully this requirement can be removed.
 
+# Support languages
+
+This utility currently supports the following languages:
+
+- C
+- C#
+- Haskell
+- JavaScript
+- PHP
+- Python
+- Yaml
+
+More are quickly being added. If you don't see your favorite language listed, make a bug report!
+
 # Contributing 
 
 This project will require lots of additional work to support more languages, have configurable options, and have strong testing. All contributions are welcome. At this time there is no contributing guide, but please feel free to make bug reports or PR's as you see fit!
