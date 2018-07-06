@@ -22,7 +22,7 @@ const readFile = function (filePath) {
 
 	if (fileExtension == null) {
 		console.log("File must have an extension (e.g. 'file.js' at this time)");
-		return false;
+		process.exit(1);
 	}
 
 	// User extensions will vary (yml vs yaml) so this maps them to prism-recognized extensions
@@ -51,10 +51,15 @@ const tokenize = function (file) {
 		"js": "javascript"
 	};
 
-	const langExtension = file.lang_extension;
+	if (!languageMap.hasOwnProperty(file.lang_extension)) {
+		console.log("Language not supported at this time. Please make a github issue.");
+		process.exit(1);
+	}
+
+	const langExtension = languageMap[file.lang_extension];
 	loadLang([langExtension]);
 
-	const prismLang = Prism.languages[languageMap[langExtension]];
+	const prismLang = Prism.languages[langExtension];
 	return Prism.tokenize(file.code, prismLang);
 }
 
@@ -90,9 +95,6 @@ const printColorizedCode = function (colorizedCode) {
 
 const userInput = parseUserInput();
 const file = readFile(userInput.file_path);
-if (!file) {
-	process.exit(1);
-}
 const tokens = tokenize(file);
 const colorizedCode = colorizeCode(tokens);
 printColorizedCode(colorizedCode);
