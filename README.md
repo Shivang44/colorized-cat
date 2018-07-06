@@ -15,6 +15,8 @@ You can clone and install it locally, but to make it easy, this utility is publi
 
 `npm install -g colorized-cat`
 
+The code is available on [github.com](https://github.com/Shivang44/colorized-cat)
+
 # Usage
 `ccat YOUR_FILE`
 
