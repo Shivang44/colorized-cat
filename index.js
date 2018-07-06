@@ -52,7 +52,8 @@ const tokenize = function (file) {
 		"php": "php",
 		"py": "python",
 		"cs": "csharp",
-		"c": "c"
+		"c": "c",
+		"hs": "haskell"
 	};
 
 	if (!languageMap.hasOwnProperty(file.lang_extension)) {
