@@ -75,33 +75,33 @@ const colorizeCode = function (tokens) {
 		'comment': Chalk.italic.yellowBright,
 		'macro': Chalk.italic.yellowBright,
 		'directive': Chalk.yellowBright,
+		'#': Chalk.yellowBright,
 		'key': Chalk.yellow
 	};
 
 	let colorizedCode = '';
 
 	const colorize = function(token) {
-		if (typeof token === 'object' && colorMap.hasOwnProperty(token.type)) {
-			// Sometimes prism.js will give us tokens within tokens, we can use recursion to simplify this scenario
+		if (typeof token === 'object') {
+			// Prism categorized it as a token of a specific type, so we may be able to color it
+
 			if (Array.isArray(token.content)) {
+				// Sometimes prism.js will give us tokens within tokens, we can use recursion to simplify this scenario
 				token.content.forEach((token) => {
 					colorize(token);
 				});
-			} else {
+			} else if (colorMap.hasOwnProperty(token.type)) {
 				colorizedCode += colorMap[token.type](token.content);
-			} 
-		} else {
-			if (typeof token !== 'object') {
-				// It's not a categorized token (a simple string), but we may still want to colorize it
-				if (colorMap.hasOwnProperty(token)) {
-					colorizedCode += colorMap[token](token);
-				} else {
-					colorizedCode += token.content;
-				}
 			} else {
-				// It's a categorized token, but we don't have a color definition for it
 				colorizedCode += token.content;
 			} 
+		} else {
+			// It's not a categorized token (a simple string), but we may still want to colorize it
+			if (colorMap.hasOwnProperty(token)) {
+				colorizedCode += colorMap[token](token);
+			} else {
+				colorizedCode += token;
+			}
 		}
 	}
 
