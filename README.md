@@ -1,7 +1,13 @@
 # Colorized Cat
-Turn those boring cat outputs into colorized (syntax-highlighted) outputs!
+Turn those boring cat outputs:
 
-ccat supports over 150 languages due to the fact that it uses [PrismJS](https://github.com/PrismJS/prism) to tokenize and calculate the syntax highlighting for each token!
+![uncolorized cat output](https://i.imgur.com/KxVeSKd.png)
+
+...into colorized (syntax-highlighted) outputs!
+
+![colorized cat output](https://i.imgur.com/8OkhNlK.png)
+
+Colorized cat supports over 150 languages due to the fact that it uses [PrismJS](https://github.com/PrismJS/prism) to tokenize and calculate the syntax highlighting for each token!
 
 
 # Installation
