@@ -4,7 +4,7 @@
 const Prism = require('prismjs');
 const fs = require('fs');
 const Chalk = require('chalk');
-const loadLang = require('prismjs/components/index.js');
+const loadLang = require('prismjs/components/');
 
 // Parses User input file and options, if any
 // TODO: Determine possible options and parse them into options

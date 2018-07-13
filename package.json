@@ -1,6 +1,6 @@
 {
   "name": "colorized-cat",
-  "version": "0.0.1",
+  "version": "1.0.5",
   "description": "Colorized cat output for many different languages and configuration files.",
   "main": "index.js",
   "scripts": {
